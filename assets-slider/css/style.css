@@ -53,3 +53,7 @@ main img{
   left: 50%;
   transform: translate(-50%);
 }
+
+.d-none{
+  display: none;
+}

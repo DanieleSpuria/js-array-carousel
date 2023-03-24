@@ -21,3 +21,10 @@ Aggiungere il **ciclo infinito** del carosello. Ovvero se è attiva la prima imm
 Aggiungere la visualizzazione di tutte le thumbnails sulla destra dell’immagine grande attiva, come nello screenshot proposto.  
 Tutte le miniature avranno un layer di opacità scura, tranne quella corrispondente all’immagine attiva, che invece avrà un bordo colorato.  
 Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di miniatura attiva.
+
+
+## Sviluppo
+
+- Container, slider, img e frecce
+- Ciclo for carica le immagini
+- La prima immagine è visibile di default
