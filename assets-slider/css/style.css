@@ -9,12 +9,16 @@ main{
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: lightskyblue;
 }
 
 .container{
   display: flex;
   width: 80%;
-  height: 60%;
+  height: 80%;
+  border: 5px solid white;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .full{
@@ -38,6 +42,10 @@ main{
   position: relative;
   width: 100%;
   height: calc(100% / 5);
+}
+
+.active{
+  border: 2px solid white;
 }
 
 .layer{
