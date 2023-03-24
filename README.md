@@ -29,4 +29,7 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 - Ciclo for carica le immagini
 - La prima immagine è visibile di default
 - Tasto next va avanti di un immagine
-- Tasto prev va indietro in un immagine
+- Tasto prev va indietro in un immagine 
+- Condizioni per il loop
+
+- Modificato HTML, CSS e aggiunto variabile full per Bonus 2

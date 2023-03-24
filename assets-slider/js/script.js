@@ -5,7 +5,7 @@
 4. Prev e next
 5. Click next aggiunge .d-none, aumenta il contatore di 1, rimuove il d-none
 6. Click prev aggiunge .d-none, diminuisce il contatore di 1, rimuove il d-none
-7. Se il contatore è 0, assume il valore della lunghezza della lista
+7. Se il contatore è 0, assume il valore della lunghezza della lista e viceversa
 */
 
 const listaImmagini = [
@@ -16,6 +16,7 @@ const listaImmagini = [
   'assets-slider/img/05.webp',
 ]
 
+const full = document.querySelector('.full');
 const slider = document.querySelector('.slider');
 
 let contatore = 0;
@@ -24,7 +25,13 @@ let contatore = 0;
 for (let i = 0; i < listaImmagini.length; i ++) {
 
   let immagine = listaImmagini[i];
-  slider.innerHTML += `<img class="img d-none" src="${immagine}">`;
+  full.innerHTML += `<img class="img d-none" src="${immagine}">`;
+  slider.innerHTML += `
+  <div class="card active">
+    <div class="layer"></div>
+    <img src="${immagine}">
+  </div>
+  `;
 
 }
 
