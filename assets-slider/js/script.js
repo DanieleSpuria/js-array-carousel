@@ -4,6 +4,7 @@
 3. Rendere visibile la prima di default
 4. Prev e next
 5. Click next aggiunge .d-none, aumenta il contatore di 1, rimuove il d-none
+6. Click prev aggiunge .d-none, diminuisce il contatore di 1, rimuove il d-none
 */
 
 const listaImmagini = [
@@ -44,3 +45,11 @@ next.addEventListener('click', function() {
 
 })
 
+// Click tasto prev
+prev.addEventListener('click', function() {
+
+  img[contatore].classList.add('d-none');
+  contatore--;
+  img[contatore].classList.remove('d-none');
+
+})

@@ -29,3 +29,4 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 - Ciclo for carica le immagini
 - La prima immagine è visibile di default
 - Tasto next va avanti di un immagine
+- Tasto prev va indietro in un immagine
