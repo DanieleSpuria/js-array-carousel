@@ -42,13 +42,13 @@ main img{
   cursor: pointer;
 }
 
-.arrow.up{
+.arrow.prev{
   top: 10px;
   left: 50%;
   transform: translate(-50%);
 }
 
-.arrow.down{
+.arrow.next{
   bottom: 10px;
   left: 50%;
   transform: translate(-50%);

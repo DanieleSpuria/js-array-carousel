@@ -28,3 +28,4 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 - Container, slider, img e frecce
 - Ciclo for carica le immagini
 - La prima immagine è visibile di default
+- Tasto next va avanti di un immagine
