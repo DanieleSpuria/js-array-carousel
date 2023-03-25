@@ -37,3 +37,4 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 - Classe opacity inserita nel click
 
 - Selezionare immagine tramite click sulla stessa
+- Ottimizzato selezione click su immagine tramite ciclo for
