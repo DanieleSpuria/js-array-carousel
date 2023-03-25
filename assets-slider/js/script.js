@@ -24,6 +24,8 @@ const slider = document.querySelector('.slider');
 
 let contatore = 0;
 
+
+
 // Caricare immagini
 for (let i = 0; i < listaImmagini.length; i ++) {
 
@@ -99,11 +101,9 @@ prev.addEventListener('click', function() {
 
 
 // Selezionare immagine tramite click sulla stessa
-contatore = 0;
-
 const listaCard = document.getElementsByClassName('card');
 
-listaCard[contatore].addEventListener('click', function () {
+listaCard[0].addEventListener('click', function () {
   
   if (listaCard[contatore] != listaCard[0]){
     img[contatore].classList.add('d-none');
