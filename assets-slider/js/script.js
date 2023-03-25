@@ -8,6 +8,7 @@
 7. Se il contatore è 0, assume il valore della lunghezza della lista e viceversa
 8. Variabile active per le card , inserita nei click
 9. Variabile opacity per i layer, inserita nei click
+10. listaCard e selezione immagine tramite click su ogni singola card
 */
 
 const listaImmagini = [
@@ -96,5 +97,89 @@ prev.addEventListener('click', function() {
 })
 
 
+
+// Selezionare immagine tramite click sulla stessa
+contatore = 0;
+
+const listaCard = document.getElementsByClassName('card');
+
+listaCard[contatore].addEventListener('click', function () {
+  
+  if (listaCard[contatore] != listaCard[0]){
+    img[contatore].classList.add('d-none');
+    active[contatore].classList.remove('active');
+    opacity[contatore].classList.add('opacity');  
+    
+    contatore = 0;
+    
+    img[contatore].classList.remove('d-none');  
+    active[contatore].classList.add('active');
+    opacity[contatore].classList.remove('opacity');
+  }
+      
+})
+
+listaCard[1].addEventListener('click', function () {
+  
+  if (listaCard[contatore] != listaCard[1]){
+    img[contatore].classList.add('d-none');
+    active[contatore].classList.remove('active');
+    opacity[contatore].classList.add('opacity');  
+
+    contatore = 1;
+
+    img[contatore].classList.remove('d-none');  
+    active[contatore].classList.add('active');
+    opacity[contatore].classList.remove('opacity');
+  } 
+})
+
+listaCard[2].addEventListener('click', function () {
+  
+  if (listaCard[contatore] != listaCard[2]){
+    img[contatore].classList.add('d-none');
+    active[contatore].classList.remove('active');
+    opacity[contatore].classList.add('opacity');  
+
+    contatore = 2;
+
+    img[contatore].classList.remove('d-none');  
+    active[contatore].classList.add('active');
+    opacity[contatore].classList.remove('opacity');
+  } 
+
+})
+
+listaCard[3].addEventListener('click', function () {
+  
+  if (listaCard[contatore] != listaCard[3]){
+    img[contatore].classList.add('d-none');
+    active[contatore].classList.remove('active');
+    opacity[contatore].classList.add('opacity');  
+
+    contatore = 3;
+
+    img[contatore].classList.remove('d-none');  
+    active[contatore].classList.add('active');
+    opacity[contatore].classList.remove('opacity');
+  } 
+
+})
+
+listaCard[4].addEventListener('click', function () {
+  
+  if (listaCard[contatore] != listaCard[4]){
+    img[contatore].classList.add('d-none');
+    active[contatore].classList.remove('active');
+    opacity[contatore].classList.add('opacity');  
+
+    contatore = 4;
+
+    img[contatore].classList.remove('d-none');  
+    active[contatore].classList.add('active');
+    opacity[contatore].classList.remove('opacity');
+  } 
+
+})
 
 

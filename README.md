@@ -35,3 +35,5 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 - Modificato HTML, CSS e aggiunto variabile full per Bonus 2
 - Creata variabile active ed inserita nei click
 - Classe opacity inserita nel click
+
+- Selezionare immagine tramite click sulla stessa
