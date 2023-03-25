@@ -6,9 +6,9 @@
 5. Click next aggiunge .d-none, aumenta il contatore di 1, rimuove il d-none
 6. Click prev aggiunge .d-none, diminuisce il contatore di 1, rimuove il d-none
 7. Se il contatore è 0, assume il valore della lunghezza della lista e viceversa
-8. Variabile listaCard per le card , inserita nei click
-9. Variabile opacity per i layer, inserita nei click
-10. listaCard e selezione immagine tramite click su ogni singola card
+8. Variabile card, inserita nei click
+9. Variabile layer, inserita nei click
+10. card e selezione immagine tramite click su ogni singola card
 11. Ottimizzare selezione immagine tramite click con ciclo for
 */
 
@@ -42,20 +42,23 @@ for (let i = 0; i < listaImmagini.length; i ++) {
 
 
 
+//////////////////
+
 let contatore = 0;
+
+//////////////////
 
 
 
 // Rendere visibile, active e togliere l'opacity alla prima di default
 
 const img = document.getElementsByClassName('img');
+const layer = document.getElementsByClassName('layer');
+const card = document.getElementsByClassName('card');
+
 img[contatore].classList.remove('d-none');
-
-const opacity = document.getElementsByClassName('layer');
-opacity[contatore].classList.remove('opacity');
-
-const listaCard = document.getElementsByClassName('card');
-listaCard[contatore].classList.add('active');
+layer[contatore].classList.remove('opacity');
+card[contatore].classList.add('active');
 
 
 
@@ -67,8 +70,8 @@ const next = document.querySelector('.arrow.next');
 next.addEventListener('click', function() {
 
   img[contatore].classList.add('d-none');
-  opacity[contatore].classList.add('opacity');
-  listaCard[contatore].classList.remove('active');
+  layer[contatore].classList.add('opacity');
+  card[contatore].classList.remove('active');
 
   if (contatore === img.length - 1){
     contatore = 0;
@@ -77,16 +80,16 @@ next.addEventListener('click', function() {
   }
 
   img[contatore].classList.remove('d-none');  
-  opacity[contatore].classList.remove('opacity');
-  listaCard[contatore].classList.add('active');
+  layer[contatore].classList.remove('opacity');
+  card[contatore].classList.add('active');
 
 })
 
 prev.addEventListener('click', function() {
 
   img[contatore].classList.add('d-none');
-  opacity[contatore].classList.add('opacity');
-  listaCard[contatore].classList.remove('active');
+  layer[contatore].classList.add('opacity');
+  card[contatore].classList.remove('active');
 
   if (contatore === 0){
     contatore = img.length - 1;
@@ -95,8 +98,8 @@ prev.addEventListener('click', function() {
   }
 
   img[contatore].classList.remove('d-none');
-  opacity[contatore].classList.remove('opacity');
-  listaCard[contatore].classList.add('active');
+  layer[contatore].classList.remove('opacity');
+  card[contatore].classList.add('active');
   
 })
 
@@ -104,22 +107,30 @@ prev.addEventListener('click', function() {
 
 // Selezionare immagine tramite click sulla stessa
 
-for (let n = 0; n < listaCard.length; n++) {
+for (let n = 0; n < card.length; n++) {
 
-  listaCard[n].addEventListener('click', function () {
+  card[n].addEventListener('click', function () {
   
-  if (contatore != listaCard[n]){
+  if (contatore != card[n]){
     img[contatore].classList.add('d-none');
-    opacity[contatore].classList.add('opacity');  
-    listaCard[contatore].classList.remove('active');
+    layer[contatore].classList.add('opacity');  
+    card[contatore].classList.remove('active');
     
     contatore = n;
     
     img[contatore].classList.remove('d-none');  
-    opacity[contatore].classList.remove('opacity');
-    listaCard[contatore].classList.add('active');
+    layer[contatore].classList.remove('opacity');
+    card[contatore].classList.add('active');
   }
       
 })
 
 }
+ 
+
+                                   ___      
+  ///////   //       //\\        //   \\
+ //         //      //  \\      //     \\
+ //         //     //    \\    ((       ))
+ //         //    //======\\    \\     //
+  ///////   //   //        \\    \\___//
