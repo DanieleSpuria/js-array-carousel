@@ -6,8 +6,8 @@
 5. Click next aggiunge .d-none, aumenta il contatore di 1, rimuove il d-none
 6. Click prev aggiunge .d-none, diminuisce il contatore di 1, rimuove il d-none
 7. Se il contatore è 0, assume il valore della lunghezza della lista e viceversa
-8. Variabile active per le card 
-9. Inserire active nei click
+8. Variabile active per le card , inserita nei click
+9. Variabile opacity per i layer, inserita nei click
 */
 
 const listaImmagini = [
@@ -30,12 +30,14 @@ for (let i = 0; i < listaImmagini.length; i ++) {
   full.innerHTML += `<img class="img d-none" src="${immagine}">`;
   slider.innerHTML += `
   <div class="card">
-    <div class="layer"></div>
+    <div class="layer opacity"></div>
     <img src="${immagine}">
   </div>
   `;
 
 }
+
+
 
 // Rendere visibile la prima di default
 const img = document.getElementsByClassName('img');
@@ -45,6 +47,12 @@ img[contatore].classList.remove('d-none');
 const active = document.getElementsByClassName('card');
 active[contatore].classList.add('active');
 
+// Togliere opacity alla prima card di default
+const opacity = document.getElementsByClassName('layer');
+opacity[contatore].classList.remove('opacity');
+
+
+
 // Frecce prev e next
 const prev = document.querySelector('.arrow.prev');
 const next = document.querySelector('.arrow.next');
@@ -53,8 +61,8 @@ const next = document.querySelector('.arrow.next');
 next.addEventListener('click', function() {
 
   img[contatore].classList.add('d-none');
-  
   active[contatore].classList.remove('active');
+  opacity[contatore].classList.add('opacity');
 
   if (contatore === img.length - 1){
     contatore = 0;
@@ -62,9 +70,9 @@ next.addEventListener('click', function() {
     contatore++;
   }
 
-  img[contatore].classList.remove('d-none');
-  
+  img[contatore].classList.remove('d-none');  
   active[contatore].classList.add('active');
+  opacity[contatore].classList.remove('opacity');
 
 })
 
@@ -72,8 +80,8 @@ next.addEventListener('click', function() {
 prev.addEventListener('click', function() {
 
   img[contatore].classList.add('d-none');
-
   active[contatore].classList.remove('active');
+  opacity[contatore].classList.add('opacity');
 
   if (contatore === 0){
     contatore = img.length - 1;
@@ -82,8 +90,8 @@ prev.addEventListener('click', function() {
   }
 
   img[contatore].classList.remove('d-none');
-
   active[contatore].classList.add('active');
+  opacity[contatore].classList.remove('opacity');
   
 })
 
