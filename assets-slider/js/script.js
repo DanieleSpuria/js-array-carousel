@@ -111,7 +111,7 @@ for (let n = 0; n < card.length; n++) {
 
   card[n].addEventListener('click', function () {
   
-  if (contatore != card[n]){
+  if (contatore != n){
     img[contatore].classList.add('d-none');
     layer[contatore].classList.add('opacity');  
     card[contatore].classList.remove('active');
