@@ -1,4 +1,4 @@
-/*
+/*******************************************************************************
 1. array con lista immagini
 2. ciclo for per caricare tutte le immagini 
 3. Rendere visibile la prima di default
@@ -10,11 +10,11 @@
 9. Variabile layer, inserita nei click
 10. card e selezione immagine tramite click su ogni singola card
 11. Ottimizzare selezione immagine tramite click con ciclo for
-*/
+********************************************************************************/
 
 
 
-// Caricare immagini
+// Caricare immagini ////////////////////////////////////////////////////////////  
 
 const listaImmagini = [
   'assets-slider/img/01.webp',
@@ -50,7 +50,7 @@ let contatore = 0;
 
 
 
-// Rendere visibile, active e togliere l'opacity alla prima di default
+// Rendere visibile, active e togliere l'opacity alla prima di default //////////
 
 const img = document.getElementsByClassName('img');
 const layer = document.getElementsByClassName('layer');
@@ -62,7 +62,7 @@ card[contatore].classList.add('active');
 
 
 
-// Cick prev e next
+// Cick prev e next /////////////////////////////////////////////////////////////
 
 const prev = document.querySelector('.arrow.prev');
 const next = document.querySelector('.arrow.next');
@@ -105,13 +105,12 @@ prev.addEventListener('click', function() {
 
 
 
-// Selezionare immagine tramite click sulla stessa
+// Selezionare immagine tramite click sulla stessa //////////////////////////////
 
 for (let n = 0; n < card.length; n++) {
 
   card[n].addEventListener('click', function () {
   
-  if (contatore != n){
     img[contatore].classList.add('d-none');
     layer[contatore].classList.add('opacity');  
     card[contatore].classList.remove('active');
@@ -121,9 +120,8 @@ for (let n = 0; n < card.length; n++) {
     img[contatore].classList.remove('d-none');  
     layer[contatore].classList.remove('opacity');
     card[contatore].classList.add('active');
-  }
-      
-})
+
+  })
 
 }
  
